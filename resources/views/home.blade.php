@@ -20,7 +20,7 @@
   </div>
   <div class="block-body">
 	  @if ($newss == 0 )
-	  <p style="text-align:center; font-size: 16px;">ไม่มีข่าวประชาสัมพันธ์</p>
+	  <p style="text-align:center; font-size: 16px; margin-top : 15px;">ไม่มีข่าวประชาสัมพันธ์</p>
 	  @else
     <marquee width="100%" height="150" onmouseover="this.scrollAmount=0" onmouseout="this.scrollAmount=1" scrollAmount="2" scrollDelay="35" truespeed direction="up">
    @foreach  ($news as $data )
@@ -61,7 +61,7 @@
     <h3 class="panel-title">ดาวน์โหลด</h3>
   </div>
   <div class="block-body">
-   <p style="text-align:center; font-size: 16px;">ไม่มีเอกสาราวน์โหลด</p>
+   <p style="text-align:center; font-size: 16px; margin-top : 15px;">ไม่มีเอกสาราวน์โหลด</p>
   </div>
   <div class="panel-footer">
     <div align="right" >
@@ -107,8 +107,7 @@
     <h3 class="panel-title"><i class="fa calendar-check-o"></i> ปฏิทินกิจกรรม</h3>
   </div>
   <div class="panel-body">
-
-
+  <p style="text-align:center; font-size: 14px; margin-top : 15px;">ไม่มีเอกสาราวน์โหลด</p>
   </div>
 </div>
 <div class="panel panel-primary">

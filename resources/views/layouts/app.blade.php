@@ -225,9 +225,15 @@ $(window).load(function() {
   </div>
   <div class="panel-body">
       <div class="dirctor">
-        <img src="{{ asset('public/executives') }}/{{ $execu->img}}" width="150px" height="200px" >
-          <h5> {{ $execu->name}}</h5>
-          <h5> {{ $execu->position}}</h5>
+      @if ($direct == 0  &&  $director != 1)
+      <img src="{{ asset('public/img') }}/nopic_person.png" width="150px" height="200px" >
+          <h5>รอเจ้าหน้าที่บันทึกข้อมูล</h5>
+
+      @else
+        <img src="{{ asset('public/executives') }}/{{ $director->img}}" width="150px" height="200px" >
+          <h5> {{ $director->name}}</h5>
+          <h5> {{ $director->position}}</h5>
+      @endif    
       </div>
   </div>
 </div>
