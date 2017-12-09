@@ -67,6 +67,10 @@ body {
 .panel-primary {
   border-color: #005B7A;
 }
+.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
 .panel-primary > .panel-heading {
   color: #ffffff;
   background-color: #005B7A;

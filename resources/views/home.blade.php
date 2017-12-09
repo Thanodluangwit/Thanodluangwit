@@ -41,13 +41,16 @@
             <h3 class="panel-title"><i class="fa fa-picture-o" aria-hidden="true"></i> ภาพกิจกรรม</h3>
         </div>
         <div class="panel-body  ">
+        @if ($gallerys == 0 )
+	        <p style="text-align:center; font-size: 16px; margin-top : 15px;">ไม่มีภาพกิจกรรม</p>
+	       @else
            @foreach  ($gallery as $data )
             <div class="col-lg-6 ">
                 <img src="{{ url('/public/gallery') }}/{{ $data->img }}"  class="img-thumbnail displayed">
                 <h5 align="center"> <a href="" >{{ $data->activaty }}</a></h5>
             </div>
             @endforeach
-
+        @endif
         </div>
         <div class="panel-footer">
         <div align="right" >

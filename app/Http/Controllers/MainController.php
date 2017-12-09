@@ -16,11 +16,12 @@ class MainController extends Controller
         $link = DB::table('cms_extlink')->get();
         $news = DB::table('cms_news')->orderBy('id', 'DESC')->get();
         $gallery = DB::table('cms_gallery')->orderBy('id', 'desc')->take(4)->get();
+        $gallerys = DB::table('cms_gallery')->count();
 		$intro = DB::table('cms_intro')->where('id','=',1)->first();
         $newss = DB::table('cms_news')->count();
         $direct = DB::table('cms_directors')->count();
         $director = DB::table('cms_directors')->where('status','=',1)->first();
-        return view('home')->with(array('info'=>$info ,'director'=>$director,'direct'=>$direct ,'link'=>$link, 'news'=>$news , 'gallery'=>$gallery,'intro'=>$intro,'newss'=>$newss));
+        return view('home')->with(array('info'=>$info ,'director'=>$director,'direct'=>$direct ,'link'=>$link, 'news'=>$news , 'gallery'=>$gallery, 'gallerys'=>$gallerys,'intro'=>$intro,'newss'=>$newss));
     }
     public function history()
     {
