@@ -25,9 +25,8 @@
         window.location="{{ URL::to('/') }}";
     </script>
     @endif
-
     <!-- Styles -->
-
+    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('public/1/js-image-slider.css') }}" rel="stylesheet">
     <link href="{{ asset('public/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
@@ -36,7 +35,6 @@
     <link href="{{ asset('public/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/jquery.bxslider.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Trirong" rel="stylesheet">
-
     <!-- JS -->
     <script src="{{ asset('public/js/jquery-1.10.2.min.js') }}"></script>
     <script src="{{ asset('public/1/js-image-slider.js') }}"></script>
@@ -45,21 +43,19 @@
     <script src="{{ asset('public/admin/js/jquery.dataTables.min.js') }}"></script>
 	<script src="{{ asset('public/admin/js/dataTables.bootstrap.min.js') }}"></script>
     <script src="{{ asset('public/admin/js/main.js') }}"></script>
-
-
    <style>
-      body {
-          font-family: 'Trirong', serif;
-          background-color: #{{ $info->bgcolor }} ;
-	  background-image: url("{{ url('/public/setting') }}/{{ $info->imgbg }}");
-          background-repeat:repeat;
-          background-attachment:fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;;
-          }
-    .footer {
+body {
+    font-family: 'Trirong', serif;
+    background-color: #{{ $info->bgcolor }} ;
+	background-image: url("{{ url('/public/setting') }}/{{ $info->imgbg }}");
+    background-repeat:repeat;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+}
+.footer {
   min-height: 20px;
   padding: 0px;
   background-color: #15a1f8;
@@ -87,29 +83,6 @@
   border-bottom-color: #005B7A;
 }
 
-       
-       
-.footser-lg {
-  padding: 0px;
-  border-radius: 0;
-}
-.dirctor {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-       }
-.center{
-    text-align: center;
-       }
-
-.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto ;
-}
-.block-body {
-  padding: 5px;
-       }
 .block-panel {
   margin-bottom: 0px;
   padding-left: 5px;
@@ -120,20 +93,8 @@
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.fixed-panel {
-              height: 250px;
 
-        }
-       .static{
-           font-size: 16px;
-           padding: 5px;
-       }
-       .eventtext  {
-           
-           font-size: 12px;
-       }
-      
-    </style>
+</style>
   @if ($info->gray==0) 
 <style>
 		img {
@@ -361,5 +322,25 @@ $(window).load(function() {
                 </div>
 
                 <!-- End Login  -->
+                <a id="myBtn" title="Back to top" href="#"><i class="fa fa-chevron-circle-up fa-3x" aria-hidden="true"></i></a>
+<script>
+/*Scroll to top when arrow up clicked BEGIN*/
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#myBtn').fadeIn();
+    } else {
+        $('#myBtn').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#myBtn").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+</script>                
 </body>
 </html>
