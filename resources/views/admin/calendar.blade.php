@@ -3,8 +3,7 @@
 @section('calendar') open  @parent @endsection
 @section('content')
 <div class="row">
-    <div class="col-md-12">
-        
+    <div class="col-md-12"> 
         <div class="panel panel-warning">
                         <div class="panel-heading">
                             <h3 class="panel-title">ปฏิทินกิจกรรม</h3>
@@ -74,7 +73,7 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">ปฏิทินกิจกรรม</div>
 							<div class="panel-body">
-								<table id="example" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr>
 											<th>หัวข้อ</th>

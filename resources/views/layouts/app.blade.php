@@ -195,7 +195,7 @@ $(window).load(function() {
           <h5>รอเจ้าหน้าที่บันทึกข้อมูล</h5>
 
       @else
-        <img src="{{ asset('public/executives') }}/{{ $director->img}}" width="150px" height="200px" >
+        <img src="{{ asset('public/directors') }}/{{ $director->img}}" width="150px" height="200px" >
           <h5> {{ $director->name}}</h5>
           <h5> {{ $director->position}}</h5>
       @endif    

@@ -87,7 +87,8 @@ class HomeController extends Controller
       return view('admin.building')->with(array('building'=>$building));
   }
   public function director(){
-      return view('admin.directors');
+      $directors = DB::table('cms_directors')->get();
+      return view('admin.directors')->with(array('directors'=>$directors));
   }
     
 }

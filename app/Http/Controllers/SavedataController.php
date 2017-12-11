@@ -217,5 +217,24 @@ public function Updateinfo()
        return Redirect('/admin/gallery');
 
   }
+    
+ public function directors(Request $request){
+      if(isset($request->img)){
+       $imagemain = time().'.'.$request->img->getClientOriginalExtension();
+       $request->img->move(public_path('directors'), $imagemain);
+     }else{
+       $imagemain ='No image';
+     }
+      DB::table('cms_directors')->insert(array('name' => Input::get('name'),
+          'position' => Input::get('position'),
+          'education' => Input::get('education'),
+          'major' => Input::get('major'),
+          'phone' => Input::get('phone'),
+          'email' => Input::get('email'),      
+          'status' => Input::get('status'),                                   
+          'img' => $imagemain ));
+       return Redirect('/admin/directors');
+
+  }   
 
 }

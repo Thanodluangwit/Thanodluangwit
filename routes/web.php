@@ -66,3 +66,4 @@ Route::post('admin/mission', 'SavedataController@mission');
 Route::post('admin/course', 'SavedataController@course');
 Route::post('admin/calendar', 'SavedataController@calendar');
 Route::post('admin/building', 'SavedataController@building');
+Route::post('admin/directors', 'SavedataController@directors');
