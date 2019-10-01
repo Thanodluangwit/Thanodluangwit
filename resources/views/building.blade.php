@@ -25,9 +25,9 @@
               <img class="img-responsive" src="{{ url('/public/building') }}/{{ $data->img }}" width="300px" height="100px" >
             </div>
             <div class="col-sm-6">
-                <h4>อาคาร/สถานที่ : {{ $data->building }}</h4>
-                <h4>ปี พ.ศ. สร้าง : {{ $data->buildyear }}</h4>
-                <h4>งบประมาณ : {{ $data->price }}</h4>
+                <h4>อาคาร/สถานที่ : {{ $data->buildings }}</h4>
+                <h4>ปี พ.ศ. สร้าง โรงเรียน : {{ $data->buildyears }}</h4>
+                <h4>งบประมาณโรงเรียน : {{ $data->prices }}</h4>
                 
             </div>    
         </div>
