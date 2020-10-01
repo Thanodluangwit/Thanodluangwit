@@ -31,7 +31,7 @@ class SavedataController extends Controller
         $imagebg = time().'.'.$request->imgbg->getClientOriginalExtension();
         $request->imgbg->move(public_path('setting'), $imagebg);
       }else{
-        $imagebg ='No image';
+        $imagebg ='No images';
       }
        DB::table('cms_setting')->where('id','=' , 1 )->update(array('imgbg' => $imagebg ));
         return Redirect('/admin/setting');
@@ -50,7 +50,7 @@ class SavedataController extends Controller
         $imagehead = time().'.'.$request->imghead->getClientOriginalExtension();
         $request->imghead->move(public_path('setting'), $imagehead);
       }else{
-        $imagehead ='No image';
+        $imagehead ='No images';
       }
        DB::table('cms_setting')->where('id','=' , 1 )->update(array('imghead' => $imagehead ));
         return Redirect('/admin/setting');
@@ -62,7 +62,7 @@ class SavedataController extends Controller
         $imagelogo = time().'.'.$request->imglogo->getClientOriginalExtension();
         $request->imglogo->move(public_path('setting'), $imagelogo);
       }else{
-        $imagelogo ='No image';
+        $imagelogo ='No images';
       }
        DB::table('cms_setting')->where('id','=' , 1 )->update(array('imglogo' => $imagelogo ));
         return Redirect('/admin/setting');
@@ -223,7 +223,7 @@ public function Updateinfo()
        $imagemain = time().'.'.$request->img->getClientOriginalExtension();
        $request->img->move(public_path('directors'), $imagemain);
      }else{
-       $imagemain ='No image';
+       $imagemain ='No images';
      }
       DB::table('cms_directors')->insert(array('name' => Input::get('name'),
           'position' => Input::get('position'),
